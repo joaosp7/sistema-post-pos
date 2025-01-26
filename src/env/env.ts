@@ -2,6 +2,7 @@ import z from "zod";
 
 const envSchema = z.object({
   DB_PASSWORD: z.string(),
+  PORT: z.number(),
 });
 
 const envProcess = envSchema.safeParse(process.env);
